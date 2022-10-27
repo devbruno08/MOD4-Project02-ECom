@@ -4,26 +4,43 @@ export const HeaderComponent = styled.header`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 10px;
+    padding: 7px;
     background-color: rgba(0, 0, 0, 0.9);
-    `;
+    align-items: center;
+`;
 
 export const HeaderLogo = styled.section`
     display: flex;
     padding-left: 5px;
-    color: brown;
-    justify-content: center;
+    color: #4B0082;
     align-items: center;
-
+    
     h1 { 
         color: white;
         padding-left: 8px;
     };
 
-    div {
-        padding-left: 5px;
-        
+    a{
+        text-decoration: none;
+        display: flex;
+        color: #4B0082;
+        align-items: center;
     }
-  
+
 `;
+
+export const HeaderSearch = styled.section`
+
+
+`
+
+export const HeaderSection = styled.section`
+    display: flex;
+    color: #4B0082;
+    font-weight: bold;
+
+    a { margin: 5px; }
+`
+
+
 

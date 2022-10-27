@@ -6,7 +6,7 @@ export const CardSection = styled.section`
     border: 2px red;
     width: 12%;
     height: 40%;
-    border: 1px red solid;
+    border: 1.5px #4B0082 solid;
     border-radius: 15px;
     margin: 20px;
     align-items: center;
