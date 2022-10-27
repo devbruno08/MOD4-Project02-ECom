@@ -10,16 +10,10 @@ export default createGlobalStyle`
 
     html, body, #root {
         display: flex;
-        min-height: 100%;
+        height: 100%;
         width: 100%;
         flex-direction: column;
-        align-items: center;
-    }
-
-    #root {
-        display: flex;
-        justify-content: space-between;
-        min-height: 100vh;
+        
     }
 
     body {
