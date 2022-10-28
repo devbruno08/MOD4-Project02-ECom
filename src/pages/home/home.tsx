@@ -1,52 +1,36 @@
 import { Card } from "../../components/card/card";
-import { DivCard } from "./styles";
+import { CardSection } from "../../components/card/styles";
+import { Product } from "../../utils/types/products.type";
+import { useState, useEffect } from "react"
+import { getProducts } from "../../mocks/products";
 
 export function Home() {
+
+  const [products, setProducts] = useState<Product[]>([]);
+
+  async function getProductsData() {
+    const allProducts = await getProducts();
+    setProducts(allProducts);
+  }
+
+  useEffect(() => {
+    getProductsData();
+  }, []);
+
   return (
     <>
-      <DivCard>
-        < Card
-        id={"asdlaksjd"}
-        description={"Baita produto"}
-        imageURL={"Fotassa"}
-        name={"Produto"}
-        price={75.50}
-        category={""}
-        />
-        < Card
-        id={"asdlaksjd"}
-        description={"Baita produto"}
-        imageURL={"Fotassa"}
-        name={"Produto"}
-        price={75.50}
-        category={""}
-        />
-        < Card
-        id={"asdlaksjd"}
-        description={"Baita produto"}
-        imageURL={"Fotassa"}
-        name={"Produto"}
-        price={75.50}
-        category={""}
-        />
-        < Card
-        id={"asdlaksjd"}
-        description={"Baita produto"}
-        imageURL={"Fotassa"}
-        name={"Produto"}
-        price={75.50}
-        category={""}
-        />
-        < Card
-        id={"asdlaksjd"}
-        description={"Baita produto"}
-        imageURL={"Fotassa"}
-        name={"Produto"}
-        price={75.50}
-        category={""}
-        />
-      </DivCard>
-      
+      <CardSection>
+        {products.map((product) => (
+          <Card
+          id={product.id}
+          description={product.description}
+          imageURL={product.imageURL}
+          name={product.name}
+          price={product.price}
+          category={product.category}
+          />
+        ))}
+      </CardSection>
     </>
   )
 }

@@ -1,5 +1,5 @@
 
-export  function off() {
+export  function Off() {
   return (
     <section>Off</section>
   )

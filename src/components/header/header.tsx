@@ -1,10 +1,13 @@
 import { SiCockroachlabs } from "react-icons/si"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
 import { NavigationMenu } from "@radix-ui/react-navigation-menu"
 
 
 export  function Header() {
+
+  const navigate = useNavigate();
+
   return (
     <>
         <HeaderComponent>
@@ -18,9 +21,15 @@ export  function Header() {
                 <input type="text" placeholder="Search Product" />
             </HeaderSearch>
             <HeaderSection> 
-                <button> Clothes </button>
-                <button> Equipments </button>
-                <button> #Off </button>
+                <button onClick={() => {
+                    navigate("/clothes")
+                }}> Clothes </button>
+                <button onClick={() => {
+                    navigate("/equipments")
+                }}> Equipments </button>
+                <button onClick={() => {
+                    navigate("/off")
+                }}>#Off </button>
                 <button> Add to cart!</button>
             </HeaderSection>
         </HeaderComponent>
