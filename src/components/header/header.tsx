@@ -1,6 +1,8 @@
 import { SiCockroachlabs } from "react-icons/si"
 import { Link } from "react-router-dom"
 import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
+import { NavigationMenu } from "@radix-ui/react-navigation-menu"
+
 
 export  function Header() {
   return (
@@ -16,13 +18,14 @@ export  function Header() {
                 <input type="text" placeholder="Search Product" />
             </HeaderSearch>
             <HeaderSection> 
-                <a>Home</a> 
-                <a>Products</a> 
+                <button> Clothes </button>
+                <button> Equipments </button>
+                <button> #Off </button>
                 <button> Add to cart!</button>
             </HeaderSection>
-            
-
         </HeaderComponent>
+              
+          
     </>
     
   )
