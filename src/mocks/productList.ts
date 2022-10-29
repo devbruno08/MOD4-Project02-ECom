@@ -17,4 +17,13 @@ export const productList = [
         category: "equipments"
         
     },
+    {
+        id: "asdiasdk",
+        description: "Skate Bart Simpson",
+        imageURL: "http://static.netshoes.com.br/produtos/skate-montado-profissional-house-skateboarding-personagens/06/49Y-0000-006/49Y-0000-006_zoom1.jpg?ts=1622733409",
+        name: "Skate Profissional",
+        price: 349.00,
+        category: "equipments"
+        
+    },
 ]
