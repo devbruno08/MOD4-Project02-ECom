@@ -8,6 +8,9 @@ export function Card({ id, name, description, price, category, imageURL}: Produc
             <h2>{name}</h2>
             <span>{price}</span>
             <p>{description}</p>
+            <button>Update</button>
+            <button>Delete</button>
+            <button>Add to cart!</button>
         </CardSection>
     )
 }
