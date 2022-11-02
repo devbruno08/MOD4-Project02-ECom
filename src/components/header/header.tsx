@@ -4,31 +4,32 @@ import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styl
 import Modal from "react-modal"
 import { useState } from "react";
 import { api } from "../../utils/api/api"
-import { Product } from "../../utils/types/products.type";
+import { ProductInput } from "../../utils/types/products.type";
+import { Form } from "../form/form"
 
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
+    top: '30%',
+    left: '70%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
-    width: '21rem',
+    marginRight: '-80%',
+    width: '30rem',
     height: '20rem',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: ' rgba(0, 0, 0, 0.8)',
+    backgroundColor: '  ',
     borderRadius: '15px',
     border: 'none',
   },
   overlay: {
-    background: 'rgba(0, 0, 0, 0.4)',
+    background: '#4e4d4a',
   },
 };
 
 Modal.setAppElement('#root');
 
-export  function Header({ getProducts }: any) {
+export  function Header({ getProducts }: any ) {
 
   const [modalIsOpen, setModalOpen] = useState(false);
 
@@ -60,6 +61,8 @@ export  function Header({ getProducts }: any) {
                 <button onClick={() => {
                     navigate("/off")
                 }}>#Off </button>
+                <button onClick={handleModal}
+                >Create-Product </button>
                 <button> Add to cart!</button>
             </HeaderSection>
         </HeaderComponent>
@@ -69,11 +72,9 @@ export  function Header({ getProducts }: any) {
         style={customStyles}
         contentLabel="form Create"
         >
-        {/* <Form getAll={getProducts} handleModal={handleModal} /> */}
-        </Modal>
-              
-          
+         <Form getAll={getProducts} handleModal={handleModal}/> 
+        </Modal> 
     </>
     
-  )
+  );
 }
