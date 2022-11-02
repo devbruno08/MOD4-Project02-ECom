@@ -6,3 +6,11 @@ export type Product = {
     category: string;
     imageURL: string;
 };
+
+export type ProductInput = {
+    name: string;
+    description: string;
+    price: number;
+    category: string;
+    imageURL: string;
+}

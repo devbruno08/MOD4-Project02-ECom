@@ -1,13 +1,11 @@
 import { Product } from "../types/products.type";
 import axios from "axios";
 
-axios.create({
-  baseURL: "hhttp://localhost:3000/products",
-  headers: { "Content-Type": "application/json" },
-});
+axios.defaults.baseURL = "http://localhost:3000/products";
+axios.defaults.headers.post["Content-Type"] = "application/json";
 
 export const api = {
-  getProducts: async (): Promise<Product[]> => {
+  getProducts: async (): Promise<Product[] | undefined> => {
     try {
       const products = await axios.get("/all-products");
       return products.data;
@@ -17,12 +15,13 @@ export const api = {
     }
   },
 
-  createProduct: async (product: Product): Promise<Product> => {
+  createProduct: async (product: Product): Promise<Product | undefined> => {
     try {
       const newProduct = await axios.post("/create", product);
       return newProduct.data;
     } catch (err: any) {
       alert("Erro ao criar o produto");
+      throw new Error(err);
     }
   },
 };

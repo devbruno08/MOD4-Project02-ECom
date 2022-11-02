@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
 import Modal from "react-modal"
 import { useState } from "react";
-import { products } from "../../utils/api/api"
+import { api } from "../../utils/api/api"
+import { Product } from "../../utils/types/products.type";
 
 
 const customStyles = {
@@ -27,14 +28,13 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export  function Header({getProducts}) {
+export  function Header({ getProducts }: any) {
 
   const [modalIsOpen, setModalOpen] = useState(false);
 
   function handleModal() {
     setModalOpen(!modalIsOpen);
   }
-
 
   const navigate = useNavigate();
 
@@ -69,7 +69,7 @@ export  function Header({getProducts}) {
         style={customStyles}
         contentLabel="form Create"
         >
-        <Form getAll={getProducts} handleModal={handleModal} />
+        {/* <Form getAll={getProducts} handleModal={handleModal} /> */}
         </Modal>
               
           
