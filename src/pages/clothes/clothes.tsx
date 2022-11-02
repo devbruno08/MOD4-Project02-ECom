@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Product } from "../../utils/types/products.type";
-import { getProducts } from "../../mocks/products";
+import { getProducts } from "../../utils/api/api";
 import { Card } from "../../components/card/card"
 import { CardSection } from "./styles";
 

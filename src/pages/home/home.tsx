@@ -2,7 +2,7 @@ import { Card } from "../../components/card/card";
 import { CardSection } from "./styles"
 import { Product } from "../../utils/types/products.type";
 import { useState, useEffect } from "react"
-import { getProducts } from "../../mocks/products";
+import { getProducts } from "../../utils/api/api";
 
 export function Home() {
 
