@@ -1,4 +1,5 @@
 import { SiCockroachlabs } from "react-icons/si"
+import { MdOutlineNoteAdd } from "react-icons/md"
 import { Link, useNavigate } from "react-router-dom"
 import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
 import Modal from "react-modal"
@@ -6,6 +7,7 @@ import { useState } from "react";
 import { api } from "../../utils/api/api"
 import { ProductInput } from "../../utils/types/products.type";
 import { Form } from "../form/form"
+
 
 
 const customStyles = {
@@ -18,12 +20,12 @@ const customStyles = {
     width: '30rem',
     height: '20rem',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '  ',
+    backgroundColor: '#000',
     borderRadius: '15px',
     border: 'none',
   },
   overlay: {
-    background: '#4e4d4a',
+    background: 'rgba(0, 0, 0, 0.6)',
   },
 };
 
@@ -61,8 +63,9 @@ export  function Header({ getProducts }: any ) {
                 <button onClick={() => {
                     navigate("/off")
                 }}>#Off </button>
-                <button onClick={handleModal}
-                >Create-Product </button>
+                <button onClick={handleModal}>
+                  <MdOutlineNoteAdd size={20}/> 
+                </button>
                 <button> Add to cart!</button>
             </HeaderSection>
         </HeaderComponent>

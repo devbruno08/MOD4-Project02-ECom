@@ -13,7 +13,7 @@ export function Form( {getProducts, handleModal}: any ) {
     const newProduct: ProductInput = {
         name: e.currentTarget.productName.value,
         description: e.currentTarget.productDescription.value,
-        price: e.currentTarget.productPrice.value,
+        price: parseFloat(e.currentTarget.productPrice.value),
         category: e.currentTarget.productCategory.value,
         imageURL: e.currentTarget.productImage.value,
     };
@@ -28,16 +28,16 @@ export function Form( {getProducts, handleModal}: any ) {
         <FormComponent>
             <form onSubmit={handleSubmit}>
                 <label>Product Name:</label>
-                <input type="text" name="productName"></input>
+                <input type="text" name="productName" required></input>
                 <label>Product Description:</label>
-                <input type="text" name="productDescription"></input>
+                <input type="text" name="productDescription" required></input>
                 <label>Product Price:</label>
-                <input type="number" name="productPrice"></input>
+                <input type="number" name="productPrice" step="0.01" required></input>
                 <label>Product Category:</label>
-                <input type="text" name="productCategory"></input>
+                <input type="text" name="productCategory" required></input>
                 <label>Product Image:</label>
-                <input type="text" name="productImage"></input>
-                <button type="submit">Submit</button>
+                <input type="text" name="productImage" required></input>
+                <button type="submit" >Submit</button>
             </form>
         </FormComponent>
     </>

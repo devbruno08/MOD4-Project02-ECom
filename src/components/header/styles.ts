@@ -36,10 +36,18 @@ export const HeaderSearch = styled.section`
 
 export const HeaderSection = styled.section`
     display: flex;
-    color: #4B0082;
-    font-weight: bold;
+    color: #4B0082
 
-    a { margin: 5px; }
+    button{
+        background-color: transparent;
+        text-decoration: none;
+        color: #4B0082,
+        background: #4B0082,
+
+    }
+    
+
+    
 `
 
 
