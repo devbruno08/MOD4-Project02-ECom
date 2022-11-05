@@ -1,10 +1,9 @@
 import { FormEvent } from "react";
-import { useState } from "react";
 import { ProductInput } from "../../utils/types/products.type";
 import { api } from "../../utils/api/api";
 import { FormComponent } from "./styles";
 
-type FormProps = {
+interface FormProps {
   handleModal: () => void;
   update: () => void;
 };
@@ -22,11 +21,8 @@ export function Form({ handleModal, update }: FormProps) {
     };
 
     const product = await api.createProduct(newProduct);
-    console.log(product)
-    console.log("product")
     if (product) {
       update();
-      console.log("Rodou!");
       handleModal();
     }
   };
