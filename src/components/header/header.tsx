@@ -1,14 +1,10 @@
 import { SiCockroachlabs } from "react-icons/si"
 import { MdOutlineNoteAdd } from "react-icons/md"
 import { Link, useNavigate } from "react-router-dom"
-import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
 import Modal from "react-modal"
 import { useState } from "react";
-import { api } from "../../utils/api/api"
-import { ProductInput } from "../../utils/types/products.type";
+import { HeaderComponent, HeaderLogo, HeaderSearch, HeaderSection } from "./styles"
 import { Form } from "../form/form"
-
-
 
 const customStyles = {
   content: {
@@ -31,7 +27,11 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export  function Header({ getProducts }: any ) {
+interface HeaderProps {
+  controlPage: () => void;
+}
+
+export  function Header({controlPage}: HeaderProps){
 
   const [modalIsOpen, setModalOpen] = useState(false);
 
@@ -73,9 +73,9 @@ export  function Header({ getProducts }: any ) {
         isOpen={modalIsOpen}
         onRequestClose={handleModal}
         style={customStyles}
-        contentLabel="form Create"
+        contentLabel="Create Form"
         >
-         <Form getAll={getProducts} handleModal={handleModal}/> 
+         <Form update={controlPage} handleModal={handleModal}/> 
         </Modal> 
     </>
     

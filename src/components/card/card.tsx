@@ -1,7 +1,11 @@
 import { Product } from "../../utils/types/products.type";
 import { CardSection } from "./styles";
 
-export function Card({ id, name, description, price, category, imageURL}: Product){
+interface CardProps extends Product {
+    update: () => void;
+}
+
+export function Card({ id, name, description, price, category, imageURL, update}: CardProps){
     return (
         <CardSection>
             <img src={imageURL} alt={name}/>

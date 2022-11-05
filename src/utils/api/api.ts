@@ -18,6 +18,7 @@ export const api = {
   createProduct: async (product: ProductInput): Promise<ProductInput | undefined> => {
     try {
       const newProduct = await axios.post("/create", product);
+      console.log(newProduct)
       return newProduct.data;
     } catch (err: any) {
       alert("Erro ao criar o produto");
