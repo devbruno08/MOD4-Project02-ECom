@@ -28,12 +28,23 @@ export const api = {
 
   deleteProduct: async (productId: string): Promise<boolean | undefined> => {
     try{
-      const toDeleted = await axios.delete("/delete" + productId);
+      const toDeleted = await axios.delete("/delete/" + productId);
       if(toDeleted.status === 200) {
         return true;
       }
     } catch(err: any) {
+      console.log(productId)
       alert("Erro ao deletar o produto");
+    }
+  },
+
+  updateProduct: async (product: ProductInput): Promise<ProductInput | undefined> => {
+    try {
+      const updatedProduct = await axios.put("/update", product);
+      return updatedProduct.data;
+    } catch (err: any) {
+      alert("Erro ao atualizar o produto");
+      throw new Error(err);
     }
   },
 };

@@ -2,9 +2,15 @@ import { useEffect, useState } from "react";
 import { Product } from "../../utils/types/products.type";
 import { api } from "../../utils/api/api";
 import { Card } from "../../components/card/card"
+import { Header } from "../../components/header/header";
 import { CardSection } from "./styles";
 
-export function Clothes() {
+
+interface HeaderProps {
+  updatePage: () => void;
+}
+
+export function Clothes({updatePage} : HeaderProps) {
 
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -20,6 +26,7 @@ export function Clothes() {
   
   return (
     <>
+      <Header controlPage={updatePage} />
       <CardSection>
         {products.map((product) => {
           if(product.category.includes("clothes")) {
@@ -31,6 +38,7 @@ export function Clothes() {
               name={product.name}
               price={product.price}
               category={product.category}
+              update={updatePage}
               />
             );
             }

@@ -24,13 +24,15 @@ export function Card({
         };
     };
 
+
+
   return (
     <CardSection>
       <img src={imageURL} alt={name} />
       <h2>{name}</h2>
       <span>{price}</span>
       <p>{description}</p>
-      <button>Update</button>
+      <button onClick={UpdateCard}>Update</button>
       <button onClick={DeleteCard}>Delete</button>
       <button>Add to cart!</button>
     </CardSection>

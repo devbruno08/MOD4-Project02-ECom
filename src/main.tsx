@@ -6,6 +6,8 @@ import GlobalStyle from "./styles/global"
 import { Clothes } from './pages/clothes/clothes'
 import { Equipments } from './pages/equipments/equipments'
 import { Off } from './pages/off/off'
+import { Header } from "../../components/header/header";
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
