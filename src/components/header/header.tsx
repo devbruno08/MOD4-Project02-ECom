@@ -1,5 +1,7 @@
 import { SiCockroachlabs } from "react-icons/si";
-import { MdOutlineNoteAdd } from "react-icons/md";
+import { FaTshirt } from "react-icons/fa";
+import { MdOutlineNoteAdd, MdLocalOffer, MdShoppingCart } from "react-icons/md";
+import { TbSkateboard } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import { useState } from "react";
@@ -63,28 +65,28 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/clothes");
             }}
           >
-            {" "}
-            Clothes{" "}
+            <FaTshirt size={20} />
           </button>
           <button
             onClick={() => {
               navigate("/equipments");
             }}
           >
-            {" "}
-            Equipments{" "}
+            <TbSkateboard size={25} />
           </button>
           <button
             onClick={() => {
               navigate("/off");
             }}
           >
-            #Off{" "}
+            <MdLocalOffer size={20} />
           </button>
           <button onClick={handleModal}>
             <MdOutlineNoteAdd size={20} />
           </button>
-          <button> Add to cart!</button>
+          <button>
+            <MdShoppingCart size={20} />
+          </button>
         </HeaderSection>
       </HeaderComponent>
       <Modal

@@ -1,17 +1,40 @@
 import styled from "styled-components";
 
 export const CardSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    border: 2px red;
-    width: 10%;
-    min-width: 8%;
-    height: 40%;
-    border: 1.5px #4B0082 solid;
-    border-radius: 15px;
-    margin: 1.5%;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  width: 8%;
+  min-width: 20%;
+  height: 40%;
+  border: 2px #4b0082 solid;
+  justify-content: space-evenly;
+`;
 
+export const CardContent = styled.section`
+  img {
+    margin-bottom: 15px;
+    border-radius: 15%;
+    width: 8rem;
+    height: 8rem;
+  }
 
-`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const ButtonSection = styled.section`
+  display: flex;
+  justify-content: center;
+`;
+
+export const Buttons = styled.button`
+  padding: 1px;
+  margin: 5px;
+  border-radius: 15%;
+  background-color: #4b0082;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+`;

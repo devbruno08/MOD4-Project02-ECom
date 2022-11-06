@@ -17,6 +17,13 @@ export function Update() {
     }
   }, []);
 
+  async function getProductById(id: string){
+    if(id) {
+      const product = await api.getProductById(id);
+      setProduct(product)
+    }
+  } 
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -28,15 +35,17 @@ export function Update() {
       imageURL: e.currentTarget.productImage.value,
     };
 
-    const productToUpdate = await api.updateProduct(newProduct);
-    if (productToUpdate) {
+    let ProductResponse;
+    if(id){
+    const productToUpdate = {...newProduct, id: id};
+    ProductResponse = await api.updateProduct(productToUpdate);
       navigate("/");
     }
   }
 
   return (
     <FormComponent>
-      <form onSubmit={handleSubmit}>
+        <h2> Product Update</h2>
         <label>Product Name:</label>
         <input
           defaultValue={product?.name}
@@ -74,7 +83,6 @@ export function Update() {
           required
         ></input>
         <button type="submit">Submit</button>
-      </form>
     </FormComponent>
   );
 }

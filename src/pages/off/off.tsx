@@ -9,14 +9,19 @@ interface HeaderProps {
   updatePage: () => void;
 }
 
-export function Off({updatePage}: HeaderProps) {
+export function Off() {
 
   const [products, setProducts] = useState<Product[]>([]);
+  const [control, setControl] = useState<boolean>(false);
 
   async function getProductsData() {
     const allProducts = await api.getProducts()
     setProducts(allProducts ?? []);
      
+  }
+
+  function updatePage() {
+    setControl(!control);
   }
 
   useEffect(() => {

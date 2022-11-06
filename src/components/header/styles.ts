@@ -36,17 +36,13 @@ export const HeaderSearch = styled.section`
 
 export const HeaderSection = styled.section`
     display: flex;
-    color: #4B0082
+    color: #4B0082;
 
     button{
-        background-color: transparent;
-        text-decoration: none;
-        color: #4B0082,
-        background: #4B0082,
-
+    background-color: transparent;
+    color: white;
     }
     
-
     
 `
 

@@ -22,6 +22,7 @@ export function Form({ handleModal, update }: FormProps) {
 
     const product = await api.createProduct(newProduct);
     if (product) {
+      console.log(product)
       update();
       handleModal();
     }

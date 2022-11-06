@@ -38,9 +38,9 @@ export const api = {
     }
   },
 
-  updateProduct: async (product: ProductInput): Promise<ProductInput | undefined> => {
+  updateProduct: async (product: Product): Promise<ProductInput | undefined> => {
     try {
-      const updatedProduct = await axios.put("/update", product);
+      const updatedProduct = await axios.put("/update" + product.id);
       return updatedProduct.data;
     } catch (err: any) {
       alert("Erro ao atualizar o produto");

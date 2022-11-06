@@ -1,8 +1,8 @@
-import { MdUpdate } from "react-icons/md";
+import { TbShoppingCartPlus } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../utils/api/api";
 import { Product } from "../../utils/types/products.type";
-import { CardSection } from "./styles";
+import { CardContent, CardSection, ButtonSection, Buttons } from "./styles";
 
 interface CardProps extends Product {
   update: () => void;
@@ -28,19 +28,28 @@ export function Card({
 
   return (
     <CardSection>
-      <img src={imageURL} alt={name} />
-      <h2>{name}</h2>
-      <span>{price}</span>
-      <p>{description}</p>
-      <button
-        onClick={() => {
-          navigate("/update/" + id);
-        }}
-      >
-        Update
-      </button>
-      <button onClick={DeleteCard}>Delete</button>
-      <button>Add to cart!</button>
+      <CardContent>
+        <img src={imageURL} alt={name} />
+        <h2>{name}</h2>
+        <span>{price}</span>
+        <p>{description}</p>
+      </CardContent>
+      <ButtonSection>
+        <Buttons
+          color="black"
+          onClick={() => {
+            navigate("/update/" + id);
+          }}
+        >
+          Update
+        </Buttons>
+        <Buttons color="black" onClick={DeleteCard}>
+          Delete
+        </Buttons>
+        <Buttons color="black">
+          <TbShoppingCartPlus size={18}/>
+        </Buttons>
+      </ButtonSection>
     </CardSection>
   );
 }

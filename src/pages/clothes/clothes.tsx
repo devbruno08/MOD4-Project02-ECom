@@ -5,14 +5,10 @@ import { Card } from "../../components/card/card"
 import { Header } from "../../components/header/header";
 import { CardSection } from "./styles";
 
-
-interface HeaderProps {
-  updatePage: () => void;
-}
-
-export function Clothes({updatePage} : HeaderProps) {
+export function Clothes() {
 
   const [products, setProducts] = useState<Product[]>([]);
+  const [control, setControl] = useState<boolean>(false);
 
   async function getProductsData() {
     const allProducts = await api.getProducts()
@@ -20,9 +16,13 @@ export function Clothes({updatePage} : HeaderProps) {
      
   }
 
+  function updatePage() {
+    setControl(!control);
+  }
+
   useEffect(() => {
     getProductsData();
-  }, [])
+  }, [control])
   
   return (
     <>

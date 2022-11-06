@@ -5,13 +5,10 @@ import { Card } from "../../components/card/card"
 import { CardSection } from "./styles";
 import { Header } from "../../components/header/header";
 
-interface HeaderProps {
-  updatePage: () => void;
-}
-
-export function Equipments({updatePage}: HeaderProps) {
+export function Equipments() {
 
   const [products, setProducts] = useState<Product[]>([]);
+  const [control, setControl] = useState<boolean>(false);
 
   async function getProductsData() {
     const allProducts = await api.getProducts()
@@ -19,9 +16,13 @@ export function Equipments({updatePage}: HeaderProps) {
      
   }
 
+  function updatePage() {
+    setControl(!control);
+  }
+
   useEffect(() => {
     getProductsData();
-  }, [])
+  }, [control])
   
   return (
     <>

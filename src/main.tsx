@@ -16,15 +16,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/clothes" element={<Clothes updatePage={function (): void {
-          throw new Error('Function not implemented.')
-        } } />}/>
-        <Route path="/equipments" element={<Equipments updatePage={function (): void {
-          throw new Error('Function not implemented.')
-        } } />}/>
-        <Route path="/off" element={<Off updatePage={function (): void {
-          throw new Error('Function not implemented.')
-        } } />}/>
+        <Route path="/clothes" element={<Clothes />}/>
+        <Route path="/equipments" element={<Equipments />}/>
+        <Route path="/off" element={<Off />}/>
         <Route path="/update/:id" element={<Update />}/>
       </Routes>
     </BrowserRouter>
