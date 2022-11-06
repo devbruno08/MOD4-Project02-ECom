@@ -47,4 +47,14 @@ export const api = {
       throw new Error(err);
     }
   },
+
+  getProductById: async (productId: string): Promise<Product | undefined> => {
+    try{
+      const product = await axios.get("/product/" + productId);
+      return product.data;
+    } catch(err: any) {
+      alert("Produto não encontrado");
+      throw new Error(err);
+    }
+  },
 };

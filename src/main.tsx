@@ -1,12 +1,13 @@
+import GlobalStyle from "./styles/global"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Home } from "./pages/home/home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import GlobalStyle from "./styles/global"
+import { Home } from "./pages/home/home"
 import { Clothes } from './pages/clothes/clothes'
 import { Equipments } from './pages/equipments/equipments'
 import { Off } from './pages/off/off'
-import { Header } from "../../components/header/header";
+import { Update } from './pages/update/update'
+
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -15,9 +16,16 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/clothes" element={<Clothes />}/>
-        <Route path="/equipments" element={<Equipments />}/>
-        <Route path="/off" element={<Off />}/>
+        <Route path="/clothes" element={<Clothes updatePage={function (): void {
+          throw new Error('Function not implemented.')
+        } } />}/>
+        <Route path="/equipments" element={<Equipments updatePage={function (): void {
+          throw new Error('Function not implemented.')
+        } } />}/>
+        <Route path="/off" element={<Off updatePage={function (): void {
+          throw new Error('Function not implemented.')
+        } } />}/>
+        <Route path="/update/:id" element={<Update />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
