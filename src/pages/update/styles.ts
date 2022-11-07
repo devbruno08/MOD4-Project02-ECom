@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 export const FormComponent = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 100%;
   width: 40%;
-  justify-content: center;
   margin: 0 auto;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   h2 {
     color: #4b0082;

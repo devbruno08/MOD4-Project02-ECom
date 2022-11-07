@@ -61,21 +61,24 @@ export function Header({ controlPage }: HeaderProps) {
           <input type="text" placeholder="Search Product" />
         </HeaderSearch>
         <HeaderSection>
-          <Buttons color="yellow"
+          <Buttons
+            color="yellow"
             onClick={() => {
               navigate("/clothes");
             }}
           >
             <FaTshirt size={20} />
           </Buttons>
-          <Buttons color="red"
+          <Buttons
+            color="red"
             onClick={() => {
               navigate("/equipments");
             }}
           >
             <TbSkateboard size={25} />
           </Buttons>
-          <Buttons color="green"
+          <Buttons
+            color="green"
             onClick={() => {
               navigate("/off");
             }}

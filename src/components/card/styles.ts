@@ -23,7 +23,10 @@ export const CardContent = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
+  p {
+    margin-top: 0.5rem;
+  }
 `;
 
 export const ButtonSection = styled.section`

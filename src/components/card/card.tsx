@@ -31,7 +31,7 @@ export function Card({
       <CardContent>
         <img src={imageURL} alt={name} />
         <h2>{name}</h2>
-        <span>{price}</span>
+        <span>{"R$ " +price}</span>
         <p>{description}</p>
       </CardContent>
       <ButtonSection>

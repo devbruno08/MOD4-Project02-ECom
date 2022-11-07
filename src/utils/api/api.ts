@@ -15,10 +15,12 @@ export const api = {
     }
   },
 
-  createProduct: async (product: ProductInput): Promise<ProductInput | undefined> => {
+  createProduct: async (
+    product: ProductInput
+  ): Promise<ProductInput | undefined> => {
     try {
       const newProduct = await axios.post("/create", product);
-      console.log(newProduct)
+      console.log(newProduct);
       return newProduct.data;
     } catch (err: any) {
       alert("Erro ao criar o produto");
@@ -27,18 +29,20 @@ export const api = {
   },
 
   deleteProduct: async (productId: string): Promise<boolean | undefined> => {
-    try{
+    try {
       const toDeleted = await axios.delete("/delete/" + productId);
-      if(toDeleted.status === 200) {
+      if (toDeleted.status === 200) {
         return true;
       }
-    } catch(err: any) {
-      console.log(productId)
+    } catch (err: any) {
+      console.log(productId);
       alert("Erro ao deletar o produto");
     }
   },
 
-  updateProduct: async (product: Product): Promise<ProductInput | undefined> => {
+  updateProduct: async (
+    product: Product
+  ): Promise<ProductInput | undefined> => {
     try {
       const updatedProduct = await axios.put("/update", product);
       return updatedProduct.data;
@@ -49,10 +53,10 @@ export const api = {
   },
 
   getProductById: async (productId: string): Promise<Product | undefined> => {
-    try{
+    try {
       const product = await axios.get("/product/" + productId);
       return product.data;
-    } catch(err: any) {
+    } catch (err: any) {
       alert("Produto não encontrado");
       throw new Error(err);
     }

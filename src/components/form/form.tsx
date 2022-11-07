@@ -6,7 +6,7 @@ import { FormComponent } from "./styles";
 interface FormProps {
   handleModal: () => void;
   update: () => void;
-};
+}
 
 export function Form({ handleModal, update }: FormProps) {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -22,11 +22,11 @@ export function Form({ handleModal, update }: FormProps) {
 
     const product = await api.createProduct(newProduct);
     if (product) {
-      console.log(product)
+      console.log(product);
       update();
       handleModal();
     }
-  };
+  }
 
   return (
     <FormComponent>
