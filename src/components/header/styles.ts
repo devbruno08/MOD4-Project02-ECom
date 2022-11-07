@@ -4,14 +4,14 @@ export const HeaderComponent = styled.header`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 7px;
+  padding: 0.4%;
   background-color: rgba(0, 0, 0, 0.9);
   align-items: center;
 `;
 
 export const HeaderLogo = styled.section`
   display: flex;
-  padding-left: 5px;
+  padding-left: 0.5%;
   color: #4b0082;
   align-items: center;
 

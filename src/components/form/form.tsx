@@ -31,6 +31,7 @@ export function Form({ handleModal, update }: FormProps) {
   return (
     <FormComponent>
       <form onSubmit={handleSubmit}>
+        <h2>Create Product</h2>
         <label>Product Name:</label>
         <input type="text" name="productName" required></input>
         <label>Product Description:</label>
