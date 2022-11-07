@@ -45,44 +45,46 @@ export function Update() {
 
   return (
     <FormComponent>
-        <h2> Product Update</h2>
-        <label>Product Name:</label>
-        <input
-          defaultValue={product?.name}
-          type="text"
-          name="productName"
-          required
-        ></input>
-        <label>Product Description:</label>
-        <input
-          defaultValue={product?.description}
-          type="text"
-          name="productDescription"
-          required
-        ></input>
-        <label>Product Price:</label>
-        <input
-          defaultValue={product?.price}
-          type="number"
-          name="productPrice"
-          step="0.01"
-          required
-        ></input>
-        <label>Product Category:</label>
-        <input
-          defaultValue={product?.category}
-          type="text"
-          name="productCategory"
-          required
-        ></input>
-        <label>Product Image:</label>
-        <input
-          defaultValue={product?.imageURL}
-          type="text"
-          name="productImage"
-          required
-        ></input>
-        <button type="submit">Submit</button>
+        <form onSubmit={handleSubmit}>
+          <h2> Product Update</h2>
+          <label>Product Name:</label>
+          <input
+            defaultValue={product?.name}
+            type="text"
+            name="productName"
+            required
+          ></input>
+          <label>Product Description:</label>
+          <input
+            defaultValue={product?.description}
+            type="text"
+            name="productDescription"
+            required
+          ></input>
+          <label>Product Price:</label>
+          <input
+            defaultValue={product?.price}
+            type="number"
+            name="productPrice"
+            step="0.01"
+            required
+          ></input>
+          <label>Product Category:</label>
+          <input
+            defaultValue={product?.category}
+            type="text"
+            name="productCategory"
+            required
+          ></input>
+          <label>Product Image:</label>
+          <input
+            defaultValue={product?.imageURL}
+            type="text"
+            name="productImage"
+            required
+          ></input>
+          <button type="submit">Submit</button>
+        </form>
     </FormComponent>
   );
 }

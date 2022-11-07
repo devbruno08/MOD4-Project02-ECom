@@ -37,14 +37,17 @@ export const HeaderSearch = styled.section`
 export const HeaderSection = styled.section`
     display: flex;
     color: #4B0082;
-
-    button{
-    background-color: transparent;
-    color: white;
-    }
-    
-    
 `
 
+type ButtonColor = {
+    color: string;
+}
 
+export const Buttons = styled.button<ButtonColor>`
+    cursor: pointer;
+    background-color: transparent;
+    color: ${(props) => props.color};
+    
+
+`
 

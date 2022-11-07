@@ -10,6 +10,7 @@ import {
   HeaderLogo,
   HeaderSearch,
   HeaderSection,
+  Buttons,
 } from "./styles";
 import { Form } from "../form/form";
 
@@ -60,33 +61,30 @@ export function Header({ controlPage }: HeaderProps) {
           <input type="text" placeholder="Search Product" />
         </HeaderSearch>
         <HeaderSection>
-          <button
+          <Buttons color="yellow"
             onClick={() => {
               navigate("/clothes");
             }}
           >
             <FaTshirt size={20} />
-          </button>
-          <button
+          </Buttons>
+          <Buttons color="red"
             onClick={() => {
               navigate("/equipments");
             }}
           >
             <TbSkateboard size={25} />
-          </button>
-          <button
+          </Buttons>
+          <Buttons color="green"
             onClick={() => {
               navigate("/off");
             }}
           >
             <MdLocalOffer size={20} />
-          </button>
-          <button onClick={handleModal}>
+          </Buttons>
+          <Buttons color="purple" onClick={handleModal}>
             <MdOutlineNoteAdd size={20} />
-          </button>
-          <button>
-            <MdShoppingCart size={20} />
-          </button>
+          </Buttons>
         </HeaderSection>
       </HeaderComponent>
       <Modal

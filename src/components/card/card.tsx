@@ -46,9 +46,6 @@ export function Card({
         <Buttons color="black" onClick={DeleteCard}>
           Delete
         </Buttons>
-        <Buttons color="black">
-          <TbShoppingCartPlus size={18}/>
-        </Buttons>
       </ButtonSection>
     </CardSection>
   );

@@ -8,6 +8,7 @@ export const CardSection = styled.section`
   height: 40%;
   border: 2px #4b0082 solid;
   justify-content: space-evenly;
+  margin: 2px;
 `;
 
 export const CardContent = styled.section`
@@ -22,6 +23,7 @@ export const CardContent = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 `;
 
 export const ButtonSection = styled.section`
