@@ -47,7 +47,7 @@ export function Header({ controlPage }: HeaderProps) {
       <HeaderComponent>
         <HeaderLogo>
           <Link to="/">
-            <SiCockroachlabs size={23} />
+            <SiCockroachlabs size={25} />
             <h1>Cheap Store</h1>
           </Link>
         </HeaderLogo>
@@ -58,7 +58,7 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/clothes");
             }}
           >
-            <FaTshirt size={20} />
+            <FaTshirt size={22} />
           </Buttons>
           <Buttons
             color="red"
@@ -66,7 +66,7 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/equipments");
             }}
           >
-            <TbSkateboard size={25} />
+            <TbSkateboard size={27} />
           </Buttons>
           <Buttons
             color="green"
@@ -74,10 +74,10 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/off");
             }}
           >
-            <MdLocalOffer size={20} />
+            <MdLocalOffer size={22} />
           </Buttons>
           <Buttons color="purple" onClick={handleModal}>
-            <MdOutlineNoteAdd size={20} />
+            <MdOutlineNoteAdd size={22} />
           </Buttons>
         </HeaderSection>
       </HeaderComponent>

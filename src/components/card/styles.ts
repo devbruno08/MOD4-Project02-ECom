@@ -24,7 +24,7 @@ export const CardContent = styled.section`
   }
 
   h2 {
-    font-size: 1500%;
+    font-size: 150%;
     margin: 2px;
   }
 

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderComponent = styled.header`
   display: flex;
   width: 100%;
+  height: 10%;
   justify-content: space-between;
   padding: 0.4%;
   background-color: rgba(0, 0, 0, 0.9);
@@ -27,8 +28,6 @@ export const HeaderLogo = styled.section`
     align-items: center;
   }
 `;
-
-export const HeaderSearch = styled.section``;
 
 export const HeaderSection = styled.section`
   display: flex;
