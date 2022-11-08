@@ -19,7 +19,7 @@ export default createGlobalStyle`
     }
 
     body {
-        background-color: rgba(0,0,0, 0.9);
+        background-color: #212121;
         color: #FFFF
     }
 `;

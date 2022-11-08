@@ -12,7 +12,7 @@ export const HeaderComponent = styled.header`
 export const HeaderLogo = styled.section`
   display: flex;
   padding-left: 0.5%;
-  color: #4b0082;
+  color: #9300ff;
   align-items: center;
 
   h1 {
@@ -23,7 +23,7 @@ export const HeaderLogo = styled.section`
   a {
     text-decoration: none;
     display: flex;
-    color: #4b0082;
+    color: #7b07d0;
     align-items: center;
   }
 `;
@@ -32,7 +32,7 @@ export const HeaderSearch = styled.section``;
 
 export const HeaderSection = styled.section`
   display: flex;
-  color: #4b0082;
+  color: #7b07d0;
 `;
 
 type ButtonColor = {

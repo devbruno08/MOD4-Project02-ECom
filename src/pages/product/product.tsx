@@ -7,7 +7,7 @@ import { OneProduct } from "./oneproduct";
 export function ProductId() {
   const { id } = useParams();
 
-  const [oneProduct, setProduct] = useState<Product[]>([]);
+  const [oneProduct, setProduct] = useState<Product>([]);
 
   useEffect(() => {
     if (id) {

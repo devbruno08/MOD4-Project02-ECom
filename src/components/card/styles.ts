@@ -5,7 +5,7 @@ export const CardSection = styled.section`
   flex-direction: column;
   max-width: 20%;
   height: 40%;
-  border: 2px #4b0082 solid;
+  border: 2px #7b07d0 solid;
   justify-content: space-evenly;
   margin-top: 5px; ;
 `;
@@ -50,7 +50,7 @@ export const ButtonSection = styled.section`
     width: 35%;
     height: 70%;
     border-radius: 15%;
-    background-color: #4b0082;
+    background-color: #7b07d0;
     color: black;
     font-weight: bold;
     cursor: pointer;
