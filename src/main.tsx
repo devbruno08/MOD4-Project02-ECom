@@ -7,7 +7,7 @@ import { Clothes } from "./pages/clothes/clothes";
 import { Equipments } from "./pages/equipments/equipments";
 import { Off } from "./pages/off/off";
 import { Update } from "./pages/update/update";
-import { ProductId } from "./pages/product/product"
+import { ProductId } from "./pages/product/product";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
