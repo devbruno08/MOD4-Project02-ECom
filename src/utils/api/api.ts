@@ -1,7 +1,7 @@
 import { Product, ProductInput } from "../types/products.type";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3000/products";
+axios.defaults.baseURL = "https://api-ecomm-back.herokuapp.com/products";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 export const api = {

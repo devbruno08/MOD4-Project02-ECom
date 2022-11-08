@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { Product } from "../../utils/types/products.type";
 import { OneProduct } from "./oneproduct";
 
+interface CardProps extends Product {}
+
 export function ProductId() {
   const { id } = useParams();
 
-  const [oneProduct, setProduct] = useState<Product>([]);
+  const [oneProduct, setProduct] = useState<CardProps>([]);
 
   useEffect(() => {
     if (id) {
