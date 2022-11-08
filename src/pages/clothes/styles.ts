@@ -5,8 +5,5 @@ export const CardSection = styled.section`
   width: 100%;
   height: 100%;
 
-  img {
-    width: 45%;
-    height: 50%;
-  }
+  
 `;

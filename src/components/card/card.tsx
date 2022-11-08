@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { api } from "../../utils/api/api";
 import { Product } from "../../utils/types/products.type";
-import { CardContent, CardSection, ButtonSection, Buttons } from "./styles";
+import { CardContent, CardSection, ButtonSection } from "./styles";
 
 interface CardProps extends Product {
   update: () => void;
@@ -34,17 +34,20 @@ export function Card({
         <p>{description}</p>
       </CardContent>
       <ButtonSection>
-        <Buttons
-          color="black"
+        <button
           onClick={() => {
             navigate("/update/" + id);
           }}
         >
           Update
-        </Buttons>
-        <Buttons color="black" onClick={DeleteCard}>
+        </button>
+        <button onClick={DeleteCard}>
           Delete
-        </Buttons>
+        </button>
+        <button onClick={() => {
+          navigate("/product/" + id);
+        }}>See
+          +</button>
       </ButtonSection>
     </CardSection>
   );

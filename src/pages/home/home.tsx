@@ -30,8 +30,7 @@ Modal.setAppElement('#root');
 export function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   const [control, setControl] = useState<boolean>(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [oneProduct, setOneProduct] = useState({});
+  
 
   async function getProductsData() {
     const allProducts = await api.getProducts();
@@ -40,10 +39,6 @@ export function Home() {
 
   function updatePage() {
     setControl(!control);
-  }
-
-  function handleModal() {
-    setModalOpen(!modalOpen);
   }
 
   useEffect(() => {

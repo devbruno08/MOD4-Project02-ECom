@@ -8,8 +8,4 @@ export const CardSection = styled.section`
   justify-content: space-around;
 
   
-  img {
-    width: 45%;
-    height: 50%;
-  }
 `;

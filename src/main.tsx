@@ -7,6 +7,7 @@ import { Clothes } from "./pages/clothes/clothes";
 import { Equipments } from "./pages/equipments/equipments";
 import { Off } from "./pages/off/off";
 import { Update } from "./pages/update/update";
+import { ProductId } from "./pages/product/product"
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Route path="/equipments" element={<Equipments />} />
         <Route path="/off" element={<Off />} />
         <Route path="/update/:id" element={<Update />} />
+        <Route path="/product/:id" element={<ProductId />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

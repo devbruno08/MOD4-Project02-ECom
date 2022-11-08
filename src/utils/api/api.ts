@@ -52,7 +52,7 @@ export const api = {
     }
   },
 
-  getProductById: async (productId: string): Promise<Product | undefined> => {
+  getProductById: async (productId: string): Promise<Product> => {
     try {
       const product = await axios.get("/product/" + productId);
       return product.data;
