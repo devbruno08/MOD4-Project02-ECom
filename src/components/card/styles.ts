@@ -5,7 +5,7 @@ export const CardSection = styled.section`
   flex-direction: column;
   max-width: 20%;
   height: 40%;
-  border: 2px #7b07d0 solid;
+  border: 3px #7b07d0 solid;
   justify-content: space-evenly;
   margin-top: 5px; ;
 `;
@@ -24,17 +24,17 @@ export const CardContent = styled.section`
   }
 
   h2 {
-    font-size: 100%;
+    font-size: 120%;
     margin: 2px;
   }
 
   span {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 
   p {
     margin-top: 5px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -48,7 +48,7 @@ export const ButtonSection = styled.section`
   button {
     margin: 0.5px;
     width: 35%;
-    height: 70%;
+    height: 50%;
     border-radius: 15%;
     background-color: #7b07d0;
     color: black;
