@@ -48,7 +48,7 @@ export const ButtonSection = styled.section`
   button {
     margin: 0.5px;
     width: 35%;
-    height: 75%;
+    height: 79%;
     border-radius: 15%;
     background-color: #7b07d0;
     color: black;
