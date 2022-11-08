@@ -20,21 +20,21 @@ export const CardContent = styled.section`
 
   img {
     width: 99%;
-    height: 62.5%;
+    height: 75%;
   }
 
   h2 {
-    font-size: 120%;
+    font-size: 180%;
     margin: 2px;
   }
 
   span {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p {
     margin-top: 5px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 `;
 
