@@ -24,17 +24,17 @@ export const CardContent = styled.section`
   }
 
   h2 {
-    font-size: 140%;
+    font-size: 1500%;
     margin: 2px;
   }
 
   span {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   p {
     margin-top: 5px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -48,7 +48,7 @@ export const ButtonSection = styled.section`
   button {
     margin: 0.5px;
     width: 35%;
-    height: 70%;
+    height: 75%;
     border-radius: 15%;
     background-color: #7b07d0;
     color: black;
