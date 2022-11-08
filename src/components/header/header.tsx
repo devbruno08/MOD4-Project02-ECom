@@ -1,6 +1,6 @@
 import { SiCockroachlabs } from "react-icons/si";
 import { FaTshirt } from "react-icons/fa";
-import { MdOutlineNoteAdd, MdLocalOffer, MdShoppingCart } from "react-icons/md";
+import { MdOutlineNoteAdd, MdLocalOffer } from "react-icons/md";
 import { TbSkateboard } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
@@ -47,7 +47,7 @@ export function Header({ controlPage }: HeaderProps) {
       <HeaderComponent>
         <HeaderLogo>
           <Link to="/">
-            <SiCockroachlabs size={25} />
+            <SiCockroachlabs size={28} />
             <h1>Cheap Store</h1>
           </Link>
         </HeaderLogo>
@@ -58,7 +58,7 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/clothes");
             }}
           >
-            <FaTshirt size={22} />
+            <FaTshirt size={24} />
           </Buttons>
           <Buttons
             color="red"
@@ -66,7 +66,7 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/equipments");
             }}
           >
-            <TbSkateboard size={27} />
+            <TbSkateboard size={29} />
           </Buttons>
           <Buttons
             color="green"
@@ -74,10 +74,10 @@ export function Header({ controlPage }: HeaderProps) {
               navigate("/off");
             }}
           >
-            <MdLocalOffer size={22} />
+            <MdLocalOffer size={24} />
           </Buttons>
           <Buttons color="purple" onClick={handleModal}>
-            <MdOutlineNoteAdd size={22} />
+            <MdOutlineNoteAdd size={24} />
           </Buttons>
         </HeaderSection>
       </HeaderComponent>
