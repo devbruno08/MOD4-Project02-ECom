@@ -6,6 +6,4 @@ export const CardSection = styled.section`
   width: 100%;
   height: 100%;
   justify-content: space-around;
-
-  
 `;

@@ -1,37 +1,34 @@
 import styled from "styled-components";
 
 export const ProductSection = styled.section`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    
-    img{
-        margin: 10%;
-        width: 40%;
-        height: 30%;
-    }
+  display: flex;
+  align-items: center;
+  width: 100%;
 
-    p{
-        margin: 20px;
-    }
+  img {
+    margin: 10%;
+    width: 40%;
+    height: 30%;
+  }
 
-    button{
-        background-color: transparent;
-        cursor: pointer;
-        border: none;
-        width: 3%;
-        margin-bottom: 50%;
-        color: red;
-    }
-`
+  p {
+    margin: 20px;
+  }
+
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    width: 3%;
+    margin-bottom: 50%;
+    color: red;
+  }
+`;
 
 export const ProductContent = styled.section`
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    
-
-`
-
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+`;

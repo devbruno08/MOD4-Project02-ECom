@@ -30,7 +30,7 @@ export function Card({
       <CardContent>
         <img src={imageURL} alt={name} />
         <h2>{name}</h2>
-        <span>{"R$ " +price}</span>
+        <span>{"R$ " + price}</span>
         <p>{description}</p>
       </CardContent>
       <ButtonSection>
@@ -41,13 +41,14 @@ export function Card({
         >
           Update
         </button>
-        <button onClick={DeleteCard}>
-          Delete
+        <button onClick={DeleteCard}>Delete</button>
+        <button
+          onClick={() => {
+            navigate("/product/" + id);
+          }}
+        >
+          See +
         </button>
-        <button onClick={() => {
-          navigate("/product/" + id);
-        }}>See
-          +</button>
       </ButtonSection>
     </CardSection>
   );

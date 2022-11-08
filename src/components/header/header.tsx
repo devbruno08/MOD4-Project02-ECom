@@ -5,23 +5,17 @@ import { TbSkateboard } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import { useState } from "react";
-import {
-  HeaderComponent,
-  HeaderLogo,
-  HeaderSearch,
-  HeaderSection,
-  Buttons,
-} from "./styles";
+import { HeaderComponent, HeaderLogo, HeaderSection, Buttons } from "./styles";
 import { Form } from "../form/form";
 
 const customStyles = {
   content: {
-    top: "30%",
+    top: "35%",
     left: "70%",
     right: "auto",
     bottom: "auto",
     marginRight: "-80%",
-    width: "30rem",
+    width: "25rem",
     height: "20rem",
     transform: "translate(-50%, -50%)",
     backgroundColor: "#000",
@@ -57,9 +51,6 @@ export function Header({ controlPage }: HeaderProps) {
             <h1>Cheap Store</h1>
           </Link>
         </HeaderLogo>
-        <HeaderSearch>
-          <input type="text" placeholder="Search Product" />
-        </HeaderSearch>
         <HeaderSection>
           <Buttons
             color="yellow"
