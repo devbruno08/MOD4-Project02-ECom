@@ -1,7 +1,7 @@
 import { Product } from "../../utils/types/products.type";
 import { useNavigate } from "react-router-dom";
 import { ProductSection, ProductContent } from "./styles";
-import { AiFillCloseSquare } from "react-icons/Ai";
+import { FaWindowClose } from "react-icons/fa";
 
 interface CardProps extends Product {}
 
@@ -25,7 +25,7 @@ export function OneProduct({
           <p>{description}</p>
         </ProductContent>
         <button onClick={() => navigate("/")}>
-          <AiFillCloseSquare size={25} />
+          <FaWindowClose size={25} />
         </button>
       </ProductSection>
     </>
