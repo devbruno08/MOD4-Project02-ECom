@@ -5,7 +5,7 @@ export const CardSection = styled.section`
   flex-direction: column;
   max-width: 20%;
   height: 40%;
-  border: 3px #7b07d0 solid;
+  border: 2px #7b07d0 solid;
   justify-content: space-evenly;
   margin-top: 5px; ;
 `;
@@ -20,11 +20,11 @@ export const CardContent = styled.section`
 
   img {
     width: 99%;
-    height: 75%;
+    height: 70%;
   }
 
   h2 {
-    font-size: 180%;
+    font-size: 140%;
     margin: 2px;
   }
 
@@ -48,7 +48,7 @@ export const ButtonSection = styled.section`
   button {
     margin: 0.5px;
     width: 35%;
-    height: 50%;
+    height: 70%;
     border-radius: 15%;
     background-color: #7b07d0;
     color: black;
